@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid bg-dark text-center pt-5 text-white">
+
+  <!-- popup message-->
+  <div aria-live="assertive" aria-atomic="true" class="position-fixed start-50 translate-middle p-3" role="alert">
+
+        <div id="liveToast" class="toast text-bg-light text-dark" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+          <div class="toast-body d-flex justify-content-center align-items-center w-100">
+            <div class="toast-body">Downloading... Please, wait!&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class=""><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button></div>
+          </div>
+        </div>
+  </div>
+
+  <br><br><br><br>
+
+
+  <!-- Logo YouTube and name -->
+  <h1><ion-icon name="logo-youtube"></ion-icon>&nbsp;&nbsp; Convert YouTube to MP3</h1>
+  <br>
+
+  <!-- Block Form -->
+  <div class="container-sm">
+  <div class="row">
+
+      <div class="col">
+      </div>
+
+      <div class="col-md-8">
+        <h6 class="lead"><form method="post">
+                {{ form.hidden_tag() }}
+                {{ form.link.label(class="form-label text-white-50") }}<br>
+                {{ form.link(class="form-control") }}
+                <br><br>
+                {{ form.submit(class="btn btn-dark border border-2 border-light fw-bold", id="liveToastBtn") }}
+        </form></h6>
+      </div>
+
+
+
+      <div class="col">
+      </div>
+
+  </div>
+  </div>
+
+    <!-- Footer -->
+  <br><br><br><br>
+  
+  <div class="mt-auto text-white-50">
+    <p>Powered on framework <a href="https://github.com/yt-dlp/yt-dlp" class="text-white">yt_dlp</a>, by <a href="https://twitter.com/" class="text-white">@x3mpython</a>.</p>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+            <!-- CSS Icon YouTube -->
+            <style>
+
+              ion-icon {
+              font-size: 64px;}
+
+              ion-icon {
+              color: light;
+              vertical-align: -17px;}
+            </style>
+
+        {% endblock %}
+
+        <title>Converter Youtube to mp3</title>
+        {% endblock %}
+    </head>
+    <body class="d-flex h-100 text-center text-bg-dark">
+        <!-- Your page content -->
+        {% block content %}
+        <!-- Flash message-->
+
+
+        {% endblock %}
+
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+            <!-- Script icon YouTube -->
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+          <!-- Toast message script -->
+          <script type="text/javascript">
+            const toastTrigger = document.getElementById('liveToastBtn')
+            const toastLiveExample = document.getElementById('liveToast')
+            if (toastTrigger) {
+            toastTrigger.addEventListener('click', () => {
+            const toast = new bootstrap.Toast(toastLiveExample)
+            toast.show()
+              })
+              }
+          </script>
+        {% endblock %}
+    </body>
+</html>
